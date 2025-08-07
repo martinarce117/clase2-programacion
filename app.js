@@ -14,8 +14,13 @@ const productos = [
 ];
 
 const tbody = document.querySelector('#tabla-productos tbody');
+const btnFiltrar = document.getElementById(`btn-filtrar`);
+const btnLimpiar =document.getElementById(`btn-limpiar`);
 
-productos.forEach(producto => {
+function renderTabla(lista){
+    tbody.innerHTML=``;
+
+lista.forEach(producto => {
   const fila = document.createElement('tr');
 
   if (producto.stock === 0) {
@@ -31,4 +36,16 @@ productos.forEach(producto => {
   `;
 
   tbody.appendChild(fila);
+});
+}
+renderTabla(productos); 
+
+
+btnFiltrar.addEventListener(`click`, () =>{
+    const productosCriticos = productos.filter(p => p.stock === 0 || p.stock <= 5);
+    renderTabla(productosCriticos);
+})
+
+btnLimpiar.addEventListener(`click`, () =>{
+    renderTabla(productos);
 });

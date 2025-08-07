@@ -28,3 +28,42 @@ table {
     h2 {
        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
     }
+
+    botones {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.botones button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  margin: 0 10px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.botones button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+#btn-filtrar {
+  background-color: #dc3545;
+}
+
+#btn-filtrar:hover {
+  background-color: #a71d2a;
+}
+
+
+#btn-limpiar {
+  background-color: #28a745;
+}
+
+#btn-limpiar:hover {
+  background-color: #1c7c31;
+}
